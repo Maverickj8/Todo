@@ -1,0 +1,121 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+body {
+  background-color: rgb(189, 160, 216);
+  margin-top: 4rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* font-family: 'Fira Sans', sans-serif; */
+  font-family: "Fira Sans", sans-serif;
+  margin: 2rem;
+  overflow-wrap: normal;
+}
+.head {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  text-shadow: 1px 1px #090202;
+  color: rgb(255, 255, 255);
+}
+/* .add-task {
+    display: flex;
+    background-color:  rgb(180, 57, 211);
+    padding: .8rem 2rem;
+    border-radius: 5px;
+} */
+.new-plans,
+.add-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+#new-task-submit {
+  color: rgb(95, 0, 95);
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: aliceblue;
+  margin-left: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+#new-task-submit:hover {
+  color: rgb(222, 43, 168);
+  background-color: rgb(5, 0, 3);
+}
+#new-task {
+  background-color: rgb(180, 57, 211);
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.584);
+  font-size: 1rem;
+}
+input,
+button {
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+.text {
+  width: 220px;
+  height: 30px;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+  border-radius: 5px;
+  background-color: aliceblue;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.785);
+  font-weight: 600;
+  /* margin-bottom: 1rem; */
+  /* padding: 1rem, 5rem; */
+  
+}
+
+.delete {
+  margin-left: 0.2rem;
+  font-weight: 600;
+  color: rgb(255, 0, 0);
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.696);
+}
+.delete:hover {
+  color: rgb(245, 0, 0);
+  background-color: rgb(5, 0, 3);
+}
+.edit {
+  font-size: .8rem;
+  color: rgba(85, 2, 104, 0.998);
+  font-weight: 600;
+  margin-left: 0.8rem;
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+.edit:hover {
+  color: rgb(222, 43, 168);
+  background-color: rgb(5, 0, 3);
+}
+
+.done {
+  text-decoration: line-through;
+  color: #0902027d;
+}
+.edit-delete {
+  display: flex;
+}
+@media (min-width: 600px) {
+.text {
+  width: 500px;
+  height: 30px;
+}
+}
