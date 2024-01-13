@@ -1,18 +1,37 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 body {
   background-color: rgb(189, 160, 216);
   margin-top: 4rem;
 }
+
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   /* font-family: 'Fira Sans', sans-serif; */
   font-family: "Fira Sans", sans-serif;
   overflow-wrap: normal;
-  padding: 1rem 5rem ;
+  padding: 1rem 5rem;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #8a009c7a;
+  width: 40%;
+  margin: auto;
+  height: 80vh;
+  overflow: hidden;
 }
+
+.taskList {
+  /* border: 1px solid red; */
+  overflow: scroll;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+}
+
 .head {
   font-family: "Fira Sans", sans-serif;
   font-weight: 900;
@@ -22,6 +41,7 @@ body {
   text-align: center;
   margin-bottom: 3rem;
 }
+
 /* .add-task {
     display: flex;
     background-color:  rgb(180, 57, 211);
@@ -42,24 +62,32 @@ body {
   font-size: 1rem;
   background-color: aliceblue;
   margin-left: 2rem;
+  margin-right: .3rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   box-shadow: 2px 2px 3px #8a009c7a;
 }
+
 #new-task-submit:hover {
   color: rgb(222, 43, 168);
-  background-color: rgb(5, 0, 3);
+  background-color: rgb(237, 237, 237);
+  cursor: pointer;
+  /* transform: scale(1.1); */
 }
+
 #new-task {
   background-color: rgb(180, 57, 211);
   padding: 0.8rem 2rem;
   border-radius: 5px;
   box-shadow: 2px 2px 3px #fffbff58;
+  color: rgb(255, 255, 255);
 }
+
 ::placeholder {
   color: rgba(255, 255, 255, 0.584);
   font-size: 1rem;
 }
+
 input,
 button {
   appearance: none;
@@ -67,6 +95,7 @@ button {
   outline: none;
   border: none;
 }
+
 .text {
   width: 220px;
   height: 30px;
@@ -74,9 +103,10 @@ button {
   border-radius: 5px;
   background-color: rgba(180, 57, 211, 0.402);
   font-size: 1rem;
-  color: rgb(0, 0, 0);
+  /* color: rgb(0, 0, 0); */
+  color: rgb(255, 255, 255);
   font-weight: 600;
-   
+
   padding: .5rem;
   text-align: center;
 }
@@ -91,11 +121,15 @@ button {
   background-color: rgba(255, 255, 255, 0.696);
   box-shadow: 2px 2px 3px #8a009c7a;
 }
+
 .delete:hover {
   color: rgb(245, 0, 0);
-  background-color: rgb(5, 0, 3);
-  
+  /* background-color: rgb(5, 0, 3); */
+  background-color: rgb(237, 237, 237);
+  cursor: pointer;
+  /* transform: scale(1.1); */
 }
+
 .edit {
   font-size: .8rem;
   color: rgba(85, 2, 104, 0.998);
@@ -107,22 +141,27 @@ button {
   background-color: rgb(255, 255, 255);
   box-shadow: 2px 2px 3px #8a009c7a;
 }
+
 .edit:hover {
   color: rgb(222, 43, 168);
   background-color: rgb(5, 0, 3);
+  background-color: rgb(237, 237, 237);
+  cursor: pointer;
 }
 
 .done {
   text-decoration: line-through;
   color: #0902027d;
 }
+
 .edit-delete {
   display: flex;
 }
+
 @media (min-width: 600px) {
-.text {
-  width: 500px;
-  height: 30px;
-  overflow-y: scroll;
-}
+  .text {
+    width: 500px;
+    height: 30px;
+    overflow-y: scroll;
+  }
 }
