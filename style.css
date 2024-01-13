@@ -10,8 +10,8 @@ body {
   align-items: center;
   /* font-family: 'Fira Sans', sans-serif; */
   font-family: "Fira Sans", sans-serif;
-  margin: 2rem;
   overflow-wrap: normal;
+  padding: 1rem 5rem ;
 }
 .head {
   font-family: "Fira Sans", sans-serif;
@@ -66,16 +66,15 @@ button {
 .text {
   width: 220px;
   height: 30px;
-  overflow-y: scroll;
   overflow-wrap: break-word;
   border-radius: 5px;
   background-color: aliceblue;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.785);
   font-weight: 600;
-  /* margin-bottom: 1rem; */
-  /* padding: 1rem, 5rem; */
-  
+  margin-bottom: 1rem; 
+  padding: 1rem, 5rem;
+  text-align: center;
 }
 
 .delete {
@@ -117,5 +116,6 @@ button {
 .text {
   width: 500px;
   height: 30px;
+  overflow-y: scroll;
 }
 }

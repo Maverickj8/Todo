@@ -8,36 +8,45 @@ let title = document.querySelector(".title")
 // Add an Event listner that clears all task from the localStorage Array
 clearAll.addEventListener('click', () => {
     // This will remove all the tasks from the localStorage
-    localStorage.removeItem("todos")
+    localStorage.removeItem("todos") 
     let deletedTodos = document.querySelectorAll(".new-plans")
     deletedTodos.forEach(todo => {
         allTodo.removeChild(todo)
     });
+    // This will be the title when all task has been cleared
     title.innerText = "Add Task"
 })
 
-
+// To add a new task
 let createNewTodo = (task) => {
+  // This will create a div that will contain the added tasks
   let newItem = document.createElement("div");
+  // This will add the new plan to the created div
   newItem.classList.add("new-plans")
+  // The new task will have this template
   const newTaskItem = `
    <p class="text">${task}</p>
     <div class="edit-delete">
     <button class="edit">Done</button>
     <button class="delete"><i class="bi bi-trash3"></i></button>
     </div>`;
+    // This will make sure that the new task inherits the above template
   newItem.innerHTML = newTaskItem;
   allTodo.appendChild(newItem);
-
+//  This will select the delete button and the added task
   let delButton = newItem.querySelector(".delete");
   let addedTask = newItem.querySelector(".text");
 
  
-  
+  // This function will remove the task from the localStorage when it is deleted
   let removeItemFromStorage = () => {
+
     let actualText = addedTask.innerText;
+    // This will get the indexOf the task that is to be deleted
     let index = todos.indexOf(actualText);
+    // This will remove the particular task that was delete from the array of taskes
     todos.splice(index, 1);
+    
     localStorage.setItem("todos", JSON.stringify(todos));
     todos.length == 0?title.innerText = "Add Task": title.innerText = "All Tasks"
   };
